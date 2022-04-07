@@ -1,0 +1,5 @@
+# make the command python default to python3
+cd /usr/bin
+sudo ln -s python3 python
+
+
