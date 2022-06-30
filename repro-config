@@ -1,0 +1,9 @@
+REPRO_NAME=python-dev
+REPRO_DOCKER_ORG=cirss
+REPRO_IMAGE_TAG=latest
+
+
+image:                  build-image   ## 
+start:                  start-repro   ## 
+
+## 
