@@ -1,0 +1,4 @@
+clean-code: clean
+purge-code: purge
+test-code: test
+package-code: package

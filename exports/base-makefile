@@ -1,0 +1,23 @@
+REQUIREMENTS_TXT=../requirements.txt
+PACKAGE_DIR=../package
+SETUP_PY=../setup.py
+
+depend:
+	echo "Ensuring required dependencies are installed"
+	pip install -r ${REQUIREMENTS_TXT}
+	echo "Done installing dependencies"
+
+test: depend
+
+package: depend
+	mkdir -p ${PACKAGE_DIR}
+	cd ${PACKAGE_DIR}; python ${SETUP_PY} bdist_wheel
+	
+clean:
+	rm -rf ${PACKAGE_DIR}/build
+	rm -rf ${PACKAGE_DIR}/dist
+	rm -rf ${PACKAGE_DIR}/sample.egg-info
+
+purge: clean
+	rm -rf ${PYTHON_DEV_DOT_DIR}/.local
+	rm -rf ${PYTHON_DEV_DOT_DIR}/.cache
