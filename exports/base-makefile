@@ -1,5 +1,5 @@
 REQUIREMENTS_TXT=../requirements.txt
-PACKAGE_DIR=../package
+PACKAGING_DIR=../packaging
 SETUP_PY=../setup.py
 
 depend:
@@ -10,13 +10,14 @@ depend:
 test: depend
 
 package: depend
-	mkdir -p ${PACKAGE_DIR}
-	cd ${PACKAGE_DIR}; python ${SETUP_PY} bdist_wheel
+	mkdir -p ${PACKAGING_DIR}
+	cd ${PACKAGING_DIR}; python ${SETUP_PY} bdist_wheel
 	
 clean:
-	rm -rf ${PACKAGE_DIR}/build
-	rm -rf ${PACKAGE_DIR}/dist
-	rm -rf ${PACKAGE_DIR}/sample.egg-info
+	py3clean ..
+	rm -rf ${PACKAGING_DIR}/build
+	rm -rf ${PACKAGING_DIR}/dist
+	rm -rf ${PACKAGING_DIR}/sample.egg-info
 
 purge: clean
 	rm -rf ${PYTHON_DEV_DOT_DIR}/.local

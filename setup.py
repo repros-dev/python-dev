@@ -1,6 +1,6 @@
 '''
 This sample project illustrates the default the configuration for a REPRO for developing
-and packaging a Python package.
+and publishing a Python package.
 '''
 
 from setuptools import setup, find_packages
