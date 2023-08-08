@@ -1,0 +1,9 @@
+
+repro.env PYTHON_DEV_DOT_DIR '$(repro.trim_dir_name_for_module python-dev)'
+repro.env PYTHONUSERBASE '${PYTHON_DEV_DOT_DIR}/.local'
+repro.env PIP_CACHE_DIR '${PYTHON_DEV_DOT_DIR}/.cache'
+
+repro.env PYTHON_MODULES_DIR '${REPRO_MNT}/modules'
+repro.env PYTHONPATH '${PYTHON_MODULES_DIR}'
+
+repro.path '${REPRO_MNT}/bin'

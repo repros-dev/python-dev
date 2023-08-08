@@ -8,6 +8,6 @@ RUN bash /repro/dist/boot-setup
 
 USER repro
 
-RUN repro.require python-dev exports --default
+RUN repro.require python-dev exports --code --default
 
 CMD  /bin/bash -il

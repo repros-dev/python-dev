@@ -10,10 +10,10 @@ I MESG Resetting the 'repro' module
 I MESG Re-initializing trim files for module 'repro'
 I MESG Resetting the 'python-dev' module
 I MESG Re-initializing trim files for module 'python-dev'
-I MESG Copying /home/repro/repro-modules/python-dev-exports/base-makefile to the 'python-dev' trim directory (/mnt/python-dev/.python-dev)
+I MESG Copying /home/repro/repro-modules/python-dev-exports/code-makefile to the 'python-dev' trim directory (/mnt/python-dev/.python-dev)
 I MESG Resetting the REPRO target mapping file (/mnt/python-dev/.repro/repro-targets)
 I MESG Installing a default (empty) target mapping file to /mnt/python-dev/.repro/repro-targets
-I MESG Mapping the 'python-dev:base:clean' target to the REPRO 'clean-code' target
-I MESG Mapping the 'python-dev:base:purge' target to the REPRO 'purge-code' target
-I MESG Mapping the 'python-dev:base:test' target to the REPRO 'test-code' target
-I MESG Mapping the 'python-dev:base:package' target to the REPRO 'package-code' target
+I MESG Mapping the 'python-dev:code:clean' target to the REPRO 'clean-code' target
+I MESG Mapping the 'python-dev:code:purge' target to the REPRO 'purge-code' target
+I MESG Mapping the 'python-dev:code:test' target to the REPRO 'test-code' target
+I MESG Mapping the 'python-dev:code:package' target to the REPRO 'package-code' target
