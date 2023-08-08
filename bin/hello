@@ -1,0 +1,5 @@
+#!/bin/python
+
+import greetings
+
+greetings.say_hello_to("World")
