@@ -4,6 +4,7 @@ repro.env PYTHONUSERBASE '${PYTHON_DEV_DOT_DIR}/.local'
 repro.env PIP_CACHE_DIR '${PYTHON_DEV_DOT_DIR}/.cache'
 
 repro.env PYTHON_MODULES_DIR '${REPRO_MNT}/modules'
-repro.env PYTHONPATH '${PYTHON_MODULES_DIR}'
+repro.env PYTHONPATH '${PYTHON_MODULES_DIR}:~/.local/lib/python3.10/site-packages/'
 
 repro.path '${REPRO_MNT}/bin'
+repro.path '/home/repro/.local/bin'

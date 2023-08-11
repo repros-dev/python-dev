@@ -4,7 +4,7 @@ SETUP_PY=../setup.py
 
 depend:
 	echo "Ensuring required dependencies are installed"
-	pip install -r ${REQUIREMENTS_TXT}
+	pip install --user -r ${REQUIREMENTS_TXT}
 	echo "Done installing dependencies"
 
 test: depend
@@ -21,4 +21,5 @@ clean:
 
 purge: clean
 	rm -rf ${PYTHON_DEV_DOT_DIR}/.local
+	pip cache purge
 	rm -rf ${PYTHON_DEV_DOT_DIR}/.cache
