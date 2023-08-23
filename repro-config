@@ -1,7 +1,16 @@
+
+PYTHON_VERSION=3.10.12
+
+#PYTHON_VERSION=3.11.3
+
 REPRO_NAME=python-dev
 REPRO_DOCKER_ORG=cirss
 REPRO_IMAGE_TAG=latest
 
+PARENT_BUILD_ARG_1=${PYTHON_VERSION}
+PARENT_IMAGE=${REPRO_DOCKER_ORG}/${REPRO_NAME}-${PYTHON_VERSION}-parent:latest
+
+DOCKER_BUILD_PROGRESS=plain
 
 image:                  build-image   ## 
 start:                  start-repro   ## 

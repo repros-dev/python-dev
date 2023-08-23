@@ -1,25 +1,24 @@
 REQUIREMENTS_TXT=../requirements.txt
 PACKAGING_DIR=../packaging
-SETUP_PY=../setup.py
 
 depend:
 	echo "Ensuring required dependencies are installed"
 	pip install --user -r ${REQUIREMENTS_TXT}
 	echo "Done installing dependencies"
 
+build: depend
+	mkdir -p ${PACKAGING_DIR}/bin
+	tmpdir=`mktemp -d`
+	file ${tmpdir}
+
 test: depend
 
-package: depend
-	mkdir -p ${PACKAGING_DIR}
-	cd ${PACKAGING_DIR}; python ${SETUP_PY} bdist_wheel
+package: 
+	cd ..; python -m build
 	
 clean:
-	py3clean ..
-	rm -rf ${PACKAGING_DIR}/build
-	rm -rf ${PACKAGING_DIR}/dist
-	rm -rf ${PACKAGING_DIR}/sample.egg-info
+	pyclean --debris --verbose  ${REPRO_MNT} ${REPRO_MNT}/src
 
 purge: clean
 	rm -rf ${PYTHON_DEV_DOT_DIR}/.local
-	pip cache purge
 	rm -rf ${PYTHON_DEV_DOT_DIR}/.cache

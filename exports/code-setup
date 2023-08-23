@@ -1,10 +1,15 @@
 
+pip install --upgrade build pyclean shiv
+
+repro.env PYTHONDEV_DEFAULT_USER_SITE_PACKAGES '`python -m site --user-site`'
+repro.env PYTHON_MODULES_DIR '${REPRO_MNT}/modules'
+repro.env PYTHONPATH '${PYTHON_MODULES_DIR}:${PYTHONDEV_DEFAULT_USER_SITE_PACKAGES}'
+
 repro.env PYTHON_DEV_DOT_DIR '$(repro.trim_dir_name_for_module python-dev)'
 repro.env PYTHONUSERBASE '${PYTHON_DEV_DOT_DIR}/.local'
 repro.env PIP_CACHE_DIR '${PYTHON_DEV_DOT_DIR}/.cache'
 
-repro.env PYTHON_MODULES_DIR '${REPRO_MNT}/modules'
-repro.env PYTHONPATH '${PYTHON_MODULES_DIR}:~/.local/lib/python3.10/site-packages/'
+#repro.env PYTHON_DEV_MODULES_PATH '~/.local/lib/python3.10/site-packages/'
 
-repro.path '${REPRO_MNT}/bin'
+repro.path '${PYTHONUSERBASE}/bin'
 repro.path '/home/repro/.local/bin'

@@ -1,4 +1,5 @@
+build-code: build
 clean-code: clean
+package-code: package
 purge-code: purge
 test-code: test
-package-code: package
