@@ -1,15 +1,14 @@
 REQUIREMENTS_TXT=../requirements.txt
-PACKAGING_DIR=../packaging
 
 depend:
 	echo "Ensuring required dependencies are installed"
 	pip install --user -r ${REQUIREMENTS_TXT}
 	echo "Done installing dependencies"
 
-build: depend
-	mkdir -p ${PACKAGING_DIR}/bin
-	tmpdir=`mktemp -d`
-	file ${tmpdir}
+# build: depend
+# 	mkdir -p ${PACKAGING_DIR}/bin
+# 	tmpdir=`mktemp -d`
+# 	file ${tmpdir}
 
 test: depend
 
